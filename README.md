@@ -5,7 +5,7 @@
 ## 使用教程
 
 1. 双击启动 Minecraft Soundpack Generator.bat，会在根目录生成一个 assets 文件夹
-2. 将 pack.png 文件（如果有的话）放进根目录，并将您整理好的 OGG 文件放进 assets 文件夹，所有的 OGG 文件应放在 assets/命名空间/sounds/ 内，例如：
+2. 将 pack.png 文件（如果有的话）放进根目录，并将您整理好的 OGG 文件放进 assets/ 文件夹，所有的 OGG 文件应放在 assets/命名空间/sounds/ 内，例如：
 
     ```c
     assets/
