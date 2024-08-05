@@ -26,7 +26,7 @@
 
 3. 再次双击启动 Minecraft Soundpack Generator.bat，根据提示输入游戏版本和资源包描述，下图中的小字部分就是资源包描述
 
-    ![image](https://github.com/user-attachments/assets/a383b852-25ed-43a2-84bf-e62184ffabcd)
+   ![image](https://github.com/user-attachments/assets/87c19573-49e7-4c71-a4f4-baaf71d397b6)
 
 4. 若命令行提示 “已生成 sounds.json”，将根目录中的 assets/ 目录、pack.mcmeta 和 pack.png 压缩为 ZIP 文件即可
 
