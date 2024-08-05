@@ -52,4 +52,3 @@
 
 3. 不支持为声音事件指定 category 一项
 4. OGG 文件不要使用除 “-” 和 “\_” 之外的特殊符号，强烈建议所有文件和文件夹统一遵守连字符或下划线命名法，例如 water-boil.ogg 或 water_boil.ogg，即所有字母均使用小写，单词和单词之间用 “-” 或 “\_” 连接
-   "# minecraft-soundpack-generator"
