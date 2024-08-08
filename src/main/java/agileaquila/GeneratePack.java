@@ -125,34 +125,6 @@ public class GeneratePack {
         }
     }
 
-    /**
-     * 用户输入资源包名称并返回其字符串
-     * 
-     * @return 返回资源包名称字符串
-     */
-    public static String getPackName(Scanner scanner) {
-        Boolean nameLegal = false;
-        String packName = "";
-        while (!nameLegal) {
-            System.out.println("请输入资源包名称：");
-            packName = scanner.nextLine();
-            if (packName.contains("/")
-                    || packName.contains("\\")
-                    || packName.contains("*")
-                    || packName.contains(":")
-                    || packName.contains("?")
-                    || packName.contains("\"")
-                    || packName.contains("<")
-                    || packName.contains(">")
-                    || packName.contains("|")) {
-                System.out.println("警告：文件名不能包含 / \\ * : ? \" < > |，请重新输入");
-                continue;
-            }
-            nameLegal = true;
-        }
-        return packName;
-    }
-
     public static void startProgram(File mainContent) throws IOException {
         Scanner scanner = new Scanner(System.in);
         // 生成 pack.mcmeta
