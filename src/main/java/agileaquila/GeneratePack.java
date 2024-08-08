@@ -102,6 +102,7 @@ public class GeneratePack {
      */
     public static void generateJson(File mainContent) throws IOException {
         File[] mainContentChildren = mainContent.listFiles();
+        Boolean isEmpty = true;
         for (File children : mainContentChildren) {
             if (children.isDirectory()) {
                 String jsonContent = GenerateClassJsonString(children);
@@ -110,11 +111,17 @@ public class GeneratePack {
                     System.out.println("警告：未在 \"" + classFolderPath + "\\sounds\" 找到任何 .ogg 文件，将跳过此命名空间");
                     continue;
                 }
+                isEmpty = false;
                 File json = new File(classFolderPath + "\\sounds.json");
                 FileWriter fr = new FileWriter(json);
                 fr.write(jsonContent);
                 fr.close();
             }
+        }
+        if (isEmpty) {
+            System.out.println("警告：未找到任何 .ogg 文件");
+        } else {
+            System.out.println("已生成 sounds.json\n");
         }
     }
 
@@ -161,7 +168,6 @@ public class GeneratePack {
         // 生成 sounds.json
         try {
             generateJson(mainContent);
-            System.out.println("已生成 sounds.json\n");
         } catch (Exception e) {
             System.out.println("错误：sounds.json 生成失败");
             System.out.println(e);
